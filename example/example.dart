@@ -1,8 +1,6 @@
 import 'package:escape_markup/escape_markup.dart';
 
 void main(List<String> arguments) {
-  const url = 'https://sindresorhus.com?x=\"🦄\"';
-
   print(escapeMp('👻 & 👻'));
   // 👻 &amp; 👻
 
