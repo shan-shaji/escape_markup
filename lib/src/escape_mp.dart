@@ -3,12 +3,12 @@ String _htmlEscape(String string) {
     string = string.replaceAll(RegExp(r"([^&])&(|&)"), ' &amp;');
   }
 
-  if (RegExp(r'\"').hasMatch(string)) {
-    string = string.replaceAll(RegExp(r'\"'), '&quot;');
+  if (RegExp('\"').hasMatch(string)) {
+    string = string.replaceAll(RegExp('\"'), '&quot;');
   }
 
-  if (RegExp(r"\'").hasMatch(string)) {
-    string = string.replaceAll(RegExp("/'"), '&#39;');
+  if (RegExp("\'").hasMatch(string)) {
+    string = string.replaceAll(RegExp("\'"), '&#39;');
   }
 
   if (RegExp(r'<').hasMatch(string)) {
@@ -23,24 +23,24 @@ String _htmlEscape(String string) {
 }
 
 String _htmlUnescape(String htmlString) {
-  if (RegExp('&gt;').hasMatch(htmlString)) {
-    htmlString = htmlString.replaceAll(RegExp('&gt;'), '>');
+  if (RegExp(r'&gt;').hasMatch(htmlString)) {
+    htmlString = htmlString.replaceAll(RegExp(r'&gt;'), '>');
   }
 
-  if (RegExp('&lt;').hasMatch(htmlString)) {
-    htmlString = htmlString.replaceAll(RegExp('&lt;'), '<');
+  if (RegExp(r'&lt;').hasMatch(htmlString)) {
+    htmlString = htmlString.replaceAll(RegExp(r'&lt;'), '<');
   }
 
-  if (RegExp('&#0?39;').hasMatch(htmlString)) {
-    htmlString = htmlString.replaceAll(RegExp('&#0?39;'), '\'');
+  if (RegExp(r'&#0?39;').hasMatch(htmlString)) {
+    htmlString = htmlString.replaceAll(RegExp(r'&#0?39;'), '\'');
   }
 
-  if (RegExp('&quot;').hasMatch(htmlString)) {
-    htmlString = htmlString.replaceAll(RegExp('&quot;'), '\"');
+  if (RegExp(r'&quot;').hasMatch(htmlString)) {
+    htmlString = htmlString.replaceAll(RegExp(r'&quot;'), '\"');
   }
 
-  if (RegExp('&amp;').hasMatch(htmlString)) {
-    htmlString = htmlString.replaceAll(RegExp('&amp;'), '&');
+  if (RegExp(r'&amp;').hasMatch(htmlString)) {
+    htmlString = htmlString.replaceAll(RegExp(r'&amp;'), '&');
   }
 
   return htmlString;
