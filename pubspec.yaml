@@ -1,7 +1,7 @@
 name: escape_markup
 description: Escape a string for use in HTML or the inverse.
 version: 1.0.0-dev.1
-# homepage: https://www.example.com
+homepage: https://github.com/shan-shaji/escape_markup
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
