@@ -13,7 +13,7 @@ void main(List<String> arguments) {
   const escapedUrl = 'https://shan-shaji.github.io?x=&quot;👻&quot;';
 
   print(unEscapeMp(escapedUrl));
-  // => https://sindresorhus.com?x="👻"
+  // => https://shan-shaji.github.io?x="👻"
 
   print(unEscapeMp('Hello &lt;em&gt;World&lt;/em&gt;'));
   // => Hello <em>World</em>

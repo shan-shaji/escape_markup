@@ -1,3 +1,4 @@
+
 String _htmlEscape(String string) {
   if (RegExp(r'([^&])&(|&)').hasMatch(string)) {
     string = string.replaceAll(RegExp(r"([^&])&(|&)"), ' &amp;');
@@ -46,6 +47,7 @@ String _htmlUnescape(String htmlString) {
   return htmlString;
 }
 
+/// Escapes the following characters in the given [string] argument: & < > " '
 String escapeMp(strings) {
   if (strings.runtimeType == String) {
     return _htmlEscape(strings);
@@ -61,7 +63,8 @@ String escapeMp(strings) {
   return output;
 }
 
-String unEscapeMp(strings) {
+/// Unescapes the following HTML entities in the given [htmlString] argument: &amp; &lt; &gt; &quot; &#39;
+String unEscapeMp(String s, {strings}) {
   if (strings.runtimeType == String) {
     return _htmlUnescape(strings);
   }
