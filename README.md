@@ -1,4 +1,4 @@
-> Escape a string for use in HTML or the inverse
+Escape a string for use in HTML or the inverse
 
 ----
 
